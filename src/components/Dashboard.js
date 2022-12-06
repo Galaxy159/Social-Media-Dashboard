@@ -45,8 +45,9 @@ export default function Dashboard() {
   return (
     <>
       <div className="dashboard">
-        {dashboardItems.map((item) => (
+        {dashboardItems.map((item, index) => (
           <DashboardItem
+            key={index}
             social={item.social}
             name={item.name}
             stats={item.stats}

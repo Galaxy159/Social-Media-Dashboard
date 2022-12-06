@@ -62,8 +62,9 @@ export default function Overview() {
     <>
       <div className="overview">
         <h2 className="overview__headline">Overview - Today</h2>
-        {overviewItems.map((item) => (
+        {overviewItems.map((item, index) => (
           <OverviewItem
+            key={index}
             type={item.type}
             social={item.social}
             stats={item.stats}

@@ -1,0 +1,82 @@
+.header {
+  display: grid;
+  margin: 0 2.4rem;
+  &__container {
+    background-color: $color-lighttheme-bg-top;
+    padding-block: 3.6rem 8.4rem;
+    border-radius: 0 0 2rem 2rem;
+    transition: all 0.4s;
+  }
+
+  &__content {
+    border-bottom: 1px solid #848bab;
+  }
+  &__headline {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: $color-lighttheme-dark-blue-text;
+    margin-bottom: 0.4rem;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-bottom: 2.4rem;
+  }
+  &__darkmode {
+    margin-top: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    &--text {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+    }
+    &--switch {
+      position: relative;
+      display: inline-block;
+      width: 4.8rem;
+      height: 2.4rem;
+      &-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-lighttheme-toggle;
+        border-radius: 5rem;
+
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: $color-lighttheme-bg-top;
+          height: 1.8rem;
+          width: 1.8rem;
+          bottom: 0.3rem;
+          right: 0.3rem;
+          border-radius: 50%;
+          transition: all 0.4s;
+        }
+      }
+
+      & input:checked + &-slider {
+        background: $color-darktheme-toggle;
+      }
+
+      & input:checked + &-slider::before {
+        transform: translateX(-2.4rem);
+        background-color: transparent;
+        box-shadow: inset 6px -4px 0px 0px $color-darktheme-card;
+      }
+
+      & input {
+        display: none;
+      }
+    }
+  }
+}
+
+// Darkmode classes
