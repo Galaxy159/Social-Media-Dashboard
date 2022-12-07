@@ -8,11 +8,12 @@ export default function DashboarCard({
   borderTop,
   posneg,
   negative,
+  isDark,
 }) {
   return (
     <>
       <div
-        className="dashboard__card"
+        className={`dashboard__card ${isDark && "darkmode__cardbg"}`}
         style={{ borderTop: `4px solid ${borderTop}` }}
       >
         <div className="dashboard__card--header">
@@ -25,7 +26,11 @@ export default function DashboarCard({
           </div>
           <div className="dashboard__card--header-name">{name}</div>
         </div>
-        <p className="dashboard__card--stats">{stats}</p>
+        <p
+          className={`dashboard__card--stats ${isDark && "darkmode__headline"}`}
+        >
+          {stats}
+        </p>
         <p className="dashboard__card--type">{type}</p>
         <div className="dashboard__card--new">
           <div className="dashboard__card--new-arrow">

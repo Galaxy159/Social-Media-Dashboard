@@ -1,15 +1,15 @@
 .dashboard {
-  max-width: 32.6rem;
-  margin: 0 auto;
   text-align: center;
   display: grid;
   gap: 2.4rem;
   transform: translateY(-4rem);
   backface-visibility: hidden;
   &__card {
+    max-width: 32.6rem;
     background-color: $color-lighttheme-card;
     border-radius: 0.5rem;
     padding-block: 3.2rem 2.4rem;
+    margin: 0 2.4rem;
     &--header {
       display: grid;
       grid-template-columns: repeat(2, max-content);

@@ -63,6 +63,14 @@ body {
   &__headerbg {
     background-color: $color-darktheme-bg-top !important;
   }
+
+  &__cardbg {
+    background-color: $color-darktheme-card !important;
+  }
+
+  &__bg {
+    background-color: $color-darktheme-bg !important;
+  }
 }
 
 .negative-stats {

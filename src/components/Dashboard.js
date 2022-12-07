@@ -6,7 +6,7 @@ import arrowDown from "../images/icon-down.svg";
 import arrowUp from "../images/icon-up.svg";
 import DashboardCard from "./DashboardCard";
 
-export default function Dashboard() {
+export default function Dashboard({ isDark }) {
   const dashboardCards = [
     {
       social: facebook,
@@ -49,7 +49,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="dashboard">
+      <div className={`dashboard ${isDark && "darkmode__bg"}`}>
         {dashboardCards.map((card, index) => (
           <DashboardCard
             key={index}
@@ -61,6 +61,7 @@ export default function Dashboard() {
             today={card.today}
             borderTop={card.borderTop}
             negative={card.negative}
+            isDark={isDark}
           />
         ))}
       </div>

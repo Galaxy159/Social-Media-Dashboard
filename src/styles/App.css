@@ -30,6 +30,12 @@ body {
 .darkmode__headerbg {
   background-color: #1f212e !important;
 }
+.darkmode__cardbg {
+  background-color: #252a41 !important;
+}
+.darkmode__bg {
+  background-color: #1e202a !important;
+}
 
 .negative-stats {
   color: #dc414c !important;
@@ -113,8 +119,6 @@ body {
 }
 
 .dashboard {
-  max-width: 32.6rem;
-  margin: 0 auto;
   text-align: center;
   display: grid;
   gap: 2.4rem;
@@ -123,9 +127,11 @@ body {
           backface-visibility: hidden;
 }
 .dashboard__card {
+  max-width: 32.6rem;
   background-color: #f0f2fa;
   border-radius: 0.5rem;
   padding-block: 3.2rem 2.4rem;
+  margin: 0 2.4rem;
 }
 .dashboard__card--header {
   display: grid;
