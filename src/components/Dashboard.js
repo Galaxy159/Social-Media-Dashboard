@@ -4,10 +4,10 @@ import instagram from "../images/icon-instagram.svg";
 import youtube from "../images/icon-youtube.svg";
 import arrowDown from "../images/icon-down.svg";
 import arrowUp from "../images/icon-up.svg";
-import DashboardItem from "./DashboardItem";
+import DashboardCard from "./DashboardCard";
 
 export default function Dashboard() {
-  const dashboardItems = [
+  const dashboardCards = [
     {
       social: facebook,
       name: "@nathanf",
@@ -15,6 +15,7 @@ export default function Dashboard() {
       type: "FOLLOWERS",
       arrow: arrowUp,
       today: "12",
+      borderTop: "#198ff5",
     },
     {
       social: twitter,
@@ -23,6 +24,7 @@ export default function Dashboard() {
       type: "FOLLOWERS",
       arrow: arrowUp,
       today: "99",
+      borderTop: "#1ca0f2",
     },
     {
       social: instagram,
@@ -31,6 +33,7 @@ export default function Dashboard() {
       type: "FOLLOWERS",
       arrow: arrowUp,
       today: "1099",
+      borderTop: "#fdc468",
     },
     {
       social: youtube,
@@ -39,21 +42,25 @@ export default function Dashboard() {
       type: "SUBSCRIBERS",
       arrow: arrowDown,
       today: "144",
+      borderTop: "#c4032a",
+      negative: true,
     },
   ];
 
   return (
     <>
       <div className="dashboard">
-        {dashboardItems.map((item, index) => (
-          <DashboardItem
+        {dashboardCards.map((card, index) => (
+          <DashboardCard
             key={index}
-            social={item.social}
-            name={item.name}
-            stats={item.stats}
-            type={item.type}
-            arrow={item.arrow}
-            today={item.today}
+            social={card.social}
+            name={card.name}
+            stats={card.stats}
+            type={card.type}
+            arrow={card.arrow}
+            today={card.today}
+            borderTop={card.borderTop}
+            negative={card.negative}
           />
         ))}
       </div>
