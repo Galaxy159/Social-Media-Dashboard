@@ -10,11 +10,11 @@ function App() {
 
   return (
     <>
-      <div className={`container ${isDark && "darkmode__text darkmode__bg"}`}>
+      <main className={`container ${isDark && "darkmode__text darkmode__bg"}`}>
         <Header isDark={isDark} setIsDark={setIsDark} />
         <Dashboard isDark={isDark} />
         <Overview isDark={isDark} />
-      </div>
+      </main>
       {/* <Footer /> */}
     </>
   );
