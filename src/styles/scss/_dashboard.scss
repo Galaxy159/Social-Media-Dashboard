@@ -6,6 +6,13 @@
   backface-visibility: hidden;
   transition: all 0.4s;
   margin-bottom: 0.6rem;
+  @include respond(desktop) {
+    gap: 3rem;
+    grid-template-columns: repeat(4, 25.5rem);
+    place-content: center;
+    transform: translateY(-10.8rem);
+    margin-bottom: -6.2rem;
+  }
 
   &__card {
     max-width: 32.6rem;
@@ -14,6 +21,10 @@
     padding-block: 3.2rem 2.4rem;
     margin: 0 2.4rem;
     transition: all 0.4s;
+    @include respond(desktop) {
+      margin: 0;
+    }
+
     &--header {
       display: grid;
       grid-template-columns: repeat(2, max-content);
@@ -21,10 +32,7 @@
       align-items: center;
       gap: 0.8rem;
       margin-bottom: 2.8rem;
-      &-icon {
-        &-img {
-        }
-      }
+
       &-name {
         font-size: 1.2rem;
         font-weight: 700;
@@ -53,10 +61,7 @@
       gap: 0.4rem;
       justify-content: center;
       align-items: center;
-      &-arrow {
-        &-img {
-        }
-      }
+
       &-text {
         font-weight: 700;
         font-size: 1.2rem;

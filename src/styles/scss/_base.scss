@@ -21,7 +21,7 @@ $color-lighttheme-dark-blue-text: #1e202a;
 // Media
 @mixin respond($breakpoint) {
   @if $breakpoint == desktop {
-    @media (min-width: 1440px) {
+    @media (min-width: 1110px) {
       @content;
     }
   }
@@ -49,6 +49,10 @@ body {
   margin: 0 auto;
   color: $color-lighttheme-grayish-blue-text;
   transition: all 0.4s;
+
+  @include respond(desktop) {
+    max-width: 144rem;
+  }
 }
 
 // Darkmode classes
