@@ -191,6 +191,7 @@ body {
 .dashboard__card {
   cursor: pointer;
   max-width: 32.6rem;
+  height: 21.6rem;
   background-color: #f0f2fa;
   border-radius: 0.5rem;
   padding-block: 3.2rem 2.4rem;
@@ -287,6 +288,7 @@ body {
 .overview__card {
   cursor: pointer;
   max-width: 32.6rem;
+  height: 12.5rem;
   border-radius: 0.5rem;
   background-color: #f0f2fa;
   display: grid;
