@@ -79,6 +79,10 @@
         background-color: $color-lighttheme-toggle;
         border-radius: 5rem;
 
+        &:hover {
+          background: $color-darktheme-toggle;
+        }
+
         &::before {
           position: absolute;
           content: "";

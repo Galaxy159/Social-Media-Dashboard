@@ -143,6 +143,9 @@ body {
   background-color: #aeb3cb;
   border-radius: 5rem;
 }
+.header__darkmode--switch-slider:hover {
+  background: linear-gradient(#378fe6, #3eda82);
+}
 .header__darkmode--switch-slider::before {
   position: absolute;
   content: "";
