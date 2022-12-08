@@ -258,6 +258,7 @@ body {
   .overview {
     display: grid;
     place-content: center;
+    padding-bottom: 7.5rem;
   }
 }
 .overview__headline {

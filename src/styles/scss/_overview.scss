@@ -5,6 +5,7 @@
   @include respond(desktop) {
     display: grid;
     place-content: center;
+    padding-bottom: 7.5rem;
   }
   &__headline {
     font-weight: 700;
