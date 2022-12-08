@@ -71,6 +71,9 @@ body {
 
   &__cardbg {
     background-color: $color-darktheme-card !important;
+    &:hover {
+      background-color: #333a55 !important;
+    }
   }
 
   &__bg {
