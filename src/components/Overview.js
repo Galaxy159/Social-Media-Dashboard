@@ -4,16 +4,24 @@ import instagram from "../images/icon-instagram.svg";
 import youtube from "../images/icon-youtube.svg";
 import arrowDown from "../images/icon-down.svg";
 import arrowUp from "../images/icon-up.svg";
-import OverviewItem from "./OverviewItem";
+import OverviewCard from "./OverviewCard";
 
-export default function Overview() {
-  const overviewItems = [
+export default function Overview({ isDark }) {
+  const overviewCards = [
+    {
+      type: "Page Views",
+      social: facebook,
+      stats: "87",
+      arrow: arrowUp,
+      percentage: "3",
+    },
     {
       type: "Likes",
       social: facebook,
       stats: "52",
       arrow: arrowDown,
       percentage: "2",
+      negative: true,
     },
     {
       type: "Likes",
@@ -49,6 +57,7 @@ export default function Overview() {
       stats: "107",
       arrow: arrowDown,
       percentage: "19",
+      negative: true,
     },
     {
       type: "Total Views",
@@ -56,22 +65,29 @@ export default function Overview() {
       stats: "1407",
       arrow: arrowDown,
       percentage: "12",
+      negative: true,
     },
   ];
   return (
     <>
       <div className="overview">
-        <h2 className="overview__headline">Overview - Today</h2>
-        {overviewItems.map((item, index) => (
-          <OverviewItem
-            key={index}
-            type={item.type}
-            social={item.social}
-            stats={item.stats}
-            arrow={item.arrow}
-            percentage={item.percentage}
-          />
-        ))}
+        <h2 className={`overview__headline ${isDark && "darkmode__headline"}`}>
+          Overview - Today
+        </h2>
+        <div className="overview__container">
+          {overviewCards.map((card, index) => (
+            <OverviewCard
+              key={index}
+              type={card.type}
+              social={card.social}
+              stats={card.stats}
+              arrow={card.arrow}
+              percentage={card.percentage}
+              negative={card.negative}
+              isDark={isDark}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

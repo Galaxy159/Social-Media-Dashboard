@@ -49,7 +49,7 @@ export default function Dashboard({ isDark }) {
 
   return (
     <>
-      <div className={`dashboard ${isDark && "darkmode__bg"}`}>
+      <div className="dashboard">
         {dashboardCards.map((card, index) => (
           <DashboardCard
             key={index}
