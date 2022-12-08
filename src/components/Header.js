@@ -9,7 +9,7 @@ export default function Header({ isDark, setIsDark }) {
             >
               Social Media Dashboard
             </h1>
-            <p className="header__text">Followers: 23,004</p>
+            <p className="header__text">Total Followers: 23,004</p>
           </div>
           <div className="header__darkmode">
             <p className="header__darkmode--text">Dark Mode</p>
