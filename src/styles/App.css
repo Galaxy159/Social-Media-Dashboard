@@ -244,6 +244,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.dashboard__card--new-arrow {
+  transform: translateY(-1px);
+}
 .dashboard__card--new-text {
   font-weight: 700;
   font-size: 1.2rem;

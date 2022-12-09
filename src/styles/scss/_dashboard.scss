@@ -68,6 +68,10 @@
       justify-content: center;
       align-items: center;
 
+      &-arrow {
+        transform: translateY(-1px);
+      }
+
       &-text {
         font-weight: 700;
         font-size: 1.2rem;
